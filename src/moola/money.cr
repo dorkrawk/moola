@@ -1,10 +1,11 @@
 module Moola
   class Money
-    DEFAULT_CURRENCY = "USD"
+    DEFAULT_CURRENCY_NAME = "USD"
+    DEFAULT_CURRENCY = Moola::Currency.find(DEFAULT_CURRENCY_NAME)
 
     getter amount, currency
 
-    def initialize(@amount : Int32, @currency : String = DEFAULT_CURRENCY)
+    def initialize(@amount : Int32, @currency : Moola::Currency = DEFAULT_CURRENCY)
     end
 
     def format
@@ -17,6 +18,10 @@ module Moola
 
     def zero?
       amount == 0
+    end
+
+    def cents
+      amount
     end
 
     def -

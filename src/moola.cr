@@ -9,8 +9,12 @@ module Moola
   class CompatabilityError < Exception
   end
 
-  def self.new(amount, currency=Money::DEFAULT_CURRENCY)
+  class UnknownCurrencyError < Exception
+  end
+
+  def self.new(amount, currency_name=Money::DEFAULT_CURRENCY_NAME)
     clean_amount = clean_init_amount(amount)
+    currency = Moola::Currency.find(currency_name)
     Money.new(clean_amount, currency)
   end
 

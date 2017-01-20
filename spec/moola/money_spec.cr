@@ -23,6 +23,14 @@ describe Moola::Money do
     end
   end
 
+  describe "#cents" do
+
+    it "returns the amount for in cents for a Money" do
+      money = Moola::Money.new(42_00)
+      money.cents.should eq(4200)
+    end
+  end
+
   describe "#-" do
 
     it "returns a Money with the negative amount" do
