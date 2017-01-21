@@ -2,17 +2,17 @@ require "../../spec_helper"
 
 describe Moola::Currency do
 
-  describe ".lookup" do
-    it "returns a Hash of currencies" do
-      # this should be better
-      Moola::Currency.lookup.keys.should contain("usd")
+  # assumes that we at least have the USD currency (usd.json) in the system
+
+  describe ".loaded_currencies" do
+    it "returns a Hash of currencies containing usd" do
+      Moola::Currency.loaded_currencies.keys.should contain("usd")
     end
   end
 
   describe ".all" do
-    it "returns an Array of all currencies" do
-      # also needs to be better
-      Moola::Currency.all.size.should eq(1)
+    it "returns an Array of all Currency objects available" do
+      Moola::Currency.all.should be_a(Array(Moola::Currency))
     end
   end
 
