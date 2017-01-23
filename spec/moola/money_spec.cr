@@ -15,6 +15,32 @@ describe Moola::Money do
     end
   end
 
+  describe "#negative?" do
+     it "returns true if a Money's amount is negative" do
+       money = Moola::Money.new(-500)
+       money.negative?.should eq(true)
+     end
+
+     it "returns true if a Money's amount is nto negative" do
+       money = Moola::Money.new(500)
+       money.negative?.should eq(false)
+     end
+  end
+
+  describe "#to_f" do
+    it "converst the amount to a Float64" do
+      money = Moola::Money.new(42_99)
+      money_f = money.to_f
+      money_f.should eq(42.99)
+      money_f.should be_a(Float64)
+    end
+
+    it "handles trailing 0s correctly" do
+      money = Moola::Money.new(42_00)
+      money.to_f.should eq(42.0)
+    end
+  end
+
   describe "#format" do
 
     it "returns a string representing the money amount" do
@@ -28,6 +54,12 @@ describe Moola::Money do
     it "returns the amount for in cents for a Money" do
       money = Moola::Money.new(42_00)
       money.cents.should eq(4200)
+    end
+  end
+
+  describe "#<" do
+    it "can sort a list of Moneys" do
+      [Moola::Money.new(500), Moola::Money.new(200), Moola::Money.new(700)].sort.should eq([Moola::Money.new(200), Moola::Money.new(500), Moola::Money.new(700)])
     end
   end
 

@@ -9,19 +9,50 @@ module Moola
     end
 
     def format
-      # this is a bad implementation, need to build Moola::Currency class
+      currency_symbol = currency.symbol
+      decimal_mark = currency.decimal_mark
+      subunit_shift = Math.log(currency.subunit_to_unit, 10).to_i
       amount_str = amount.to_s
-      unit_str = amount_str[0, amount_str.size - 2]
-      subunit_str = amount_str[amount_str.size - 2, amount_str.size]
-      "$#{unit_str}.#{subunit_str}"
+      unit_str = amount_str[0, amount_str.size - subunit_shift]
+      subunit_str = amount_str[amount_str.size - subunit_shift, amount_str.size]
+      formatted_value = "#{unit_str}#{decimal_mark}#{subunit_str}"
+      if currency.symbol_first
+        currency_symbol + formatted_value
+      else
+        formatted_value + currency_symbol
+      end
     end
 
     def zero?
       amount == 0
     end
 
+    def negative?
+      amount < 0
+    end
+
+    def abs
+      Money.new(amount.abs, currency)
+    end
+
     def cents
       amount
+    end
+
+    def to_s
+      self.format
+    end
+
+    def to_f64
+      amount / currency.subunit_to_unit.to_f64
+    end
+
+    def to_f32
+      self.to_f64.to_f32
+    end
+
+    def to_f
+      self.to_f64
     end
 
     def -
@@ -34,6 +65,26 @@ module Moola
       else
         false
       end
+    end
+
+    def <(other)
+      if other.is_a?(Money) && currency == other.currency
+        amount < other.amount
+      else
+        raise CompatabilityError.new
+      end
+    end
+
+    def >(other)
+      !(self < other || self == other)
+    end
+
+    def <=(other)
+      self < other || self == other
+    end
+
+    def >=(other)
+      self > other || self == other
     end
 
     def !=(other)
