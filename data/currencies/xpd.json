@@ -1,0 +1,10 @@
+{
+  "iso_code": "XPD",
+  "name": "Palladium",
+  "symbol": "oz t",
+  "subunit": "oz",
+  "subunit_to_unit": 1,
+  "symbol_first": false,
+  "decimal_mark": ".",
+  "thousands_separator": ","
+}

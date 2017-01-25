@@ -1,0 +1,11 @@
+{
+  "iso_code": "RWF",
+  "name": "Rwandan Franc",
+  "symbol": "FRw",
+  "subunit": "Centime",
+  "subunit_to_unit": 1,
+  "symbol_first": false,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 100
+}

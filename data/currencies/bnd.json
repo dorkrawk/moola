@@ -1,8 +1,8 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
+  "iso_code": "BND",
+  "name": "Brunei Dollar",
   "symbol": "$",
-  "subunit": "Cent",
+  "subunit": "Sen",
   "subunit_to_unit": 100,
   "symbol_first": true,
   "decimal_mark": ".",

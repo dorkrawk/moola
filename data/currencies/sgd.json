@@ -1,6 +1,6 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
+  "iso_code": "SGD",
+  "name": "Singapore Dollar",
   "symbol": "$",
   "subunit": "Cent",
   "subunit_to_unit": 100,

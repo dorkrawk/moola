@@ -1,0 +1,11 @@
+{
+  "iso_code": "AWG",
+  "name": "Aruban Florin",
+  "symbol": "ƒ",
+  "subunit": "Cent",
+  "subunit_to_unit": 100,
+  "symbol_first": false,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 5
+}

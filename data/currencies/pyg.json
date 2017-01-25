@@ -1,0 +1,11 @@
+{
+  "iso_code": "PYG",
+  "name": "Paraguayan Guaraní",
+  "symbol": "₲",
+  "subunit": "Céntimo",
+  "subunit_to_unit": 1,
+  "symbol_first": true,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 5000
+}

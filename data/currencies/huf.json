@@ -1,0 +1,11 @@
+{
+  "iso_code": "HUF",
+  "name": "Hungarian Forint",
+  "symbol": "Ft",
+  "subunit": "Fillér",
+  "subunit_to_unit": 100,
+  "symbol_first": false,
+  "decimal_mark": ",",
+  "thousands_separator": ".",
+  "smallest_denomination": 5
+}

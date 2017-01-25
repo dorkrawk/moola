@@ -1,0 +1,11 @@
+{
+  "iso_code": "xts",
+  "name": "Codes specifically reserved for testing purposes",
+  "symbol": "",
+  "subunit": "",
+  "subunit_to_unit": 1,
+  "symbol_first": false,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": ""
+}

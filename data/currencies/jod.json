@@ -1,0 +1,11 @@
+{
+  "iso_code": "JOD",
+  "name": "Jordanian Dinar",
+  "symbol": "د.ا",
+  "subunit": "Fils",
+  "subunit_to_unit": 1000,
+  "symbol_first": true,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 5
+}

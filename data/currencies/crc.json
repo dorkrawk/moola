@@ -1,0 +1,11 @@
+{
+  "iso_code": "CRC",
+  "name": "Costa Rican Colón",
+  "symbol": "₡",
+  "subunit": "Céntimo",
+  "subunit_to_unit": 100,
+  "symbol_first": true,
+  "decimal_mark": ",",
+  "thousands_separator": ".",
+  "smallest_denomination": 500
+}

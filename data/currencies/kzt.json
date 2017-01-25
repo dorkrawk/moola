@@ -1,0 +1,11 @@
+{
+  "iso_code": "KZT",
+  "name": "Kazakhstani Tenge",
+  "symbol": "〒",
+  "subunit": "Tiyn",
+  "subunit_to_unit": 100,
+  "symbol_first": false,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 100
+}

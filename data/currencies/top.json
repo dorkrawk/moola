@@ -1,8 +1,8 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
-  "symbol": "$",
-  "subunit": "Cent",
+  "iso_code": "TOP",
+  "name": "Tongan Paʻanga",
+  "symbol": "T$",
+  "subunit": "Seniti",
   "subunit_to_unit": 100,
   "symbol_first": true,
   "decimal_mark": ".",

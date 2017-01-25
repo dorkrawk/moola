@@ -1,0 +1,11 @@
+{
+  "iso_code": "BHD",
+  "name": "Bahraini Dinar",
+  "symbol": "ب.د",
+  "subunit": "Fils",
+  "subunit_to_unit": 1000,
+  "symbol_first": true,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 5
+}

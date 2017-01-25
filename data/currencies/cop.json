@@ -1,0 +1,11 @@
+{
+  "iso_code": "COP",
+  "name": "Colombian Peso",
+  "symbol": "$",
+  "subunit": "Centavo",
+  "subunit_to_unit": 100,
+  "symbol_first": true,
+  "decimal_mark": ",",
+  "thousands_separator": ".",
+  "smallest_denomination": 20
+}

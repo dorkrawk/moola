@@ -1,10 +1,10 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
+  "iso_code": "SRD",
+  "name": "Surinamese Dollar",
   "symbol": "$",
   "subunit": "Cent",
   "subunit_to_unit": 100,
-  "symbol_first": true,
+  "symbol_first": false,
   "decimal_mark": ".",
   "thousands_separator": ",",
   "smallest_denomination": 1

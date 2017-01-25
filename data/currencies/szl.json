@@ -1,7 +1,7 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
-  "symbol": "$",
+  "iso_code": "SZL",
+  "name": "Swazi Lilangeni",
+  "symbol": "E",
   "subunit": "Cent",
   "subunit_to_unit": 100,
   "symbol_first": true,

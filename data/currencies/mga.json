@@ -1,0 +1,11 @@
+{
+  "iso_code": "MGA",
+  "name": "Malagasy Ariary",
+  "symbol": "Ar",
+  "subunit": "Iraimbilanja",
+  "subunit_to_unit": 5,
+  "symbol_first": true,
+  "decimal_mark": ".",
+  "thousands_separator": ",",
+  "smallest_denomination": 1
+}

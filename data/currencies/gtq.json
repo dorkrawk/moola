@@ -1,8 +1,8 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
-  "symbol": "$",
-  "subunit": "Cent",
+  "iso_code": "GTQ",
+  "name": "Guatemalan Quetzal",
+  "symbol": "Q",
+  "subunit": "Centavo",
   "subunit_to_unit": 100,
   "symbol_first": true,
   "decimal_mark": ".",

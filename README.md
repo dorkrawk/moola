@@ -11,7 +11,6 @@ money.cents  # 4200
 money.zero?  # false
 money.to_f # 42.0
 -money == Moola.new(-42_00)
-# and others...
 ```
 
 ### Comparisons

@@ -1,0 +1,10 @@
+{
+  "iso_code": "XDR",
+  "name": "Special Drawing Rights",
+  "symbol": "SDR",
+  "subunit": "",
+  "subunit_to_unit": 1,
+  "symbol_first": false,
+  "decimal_mark": ".",
+  "thousands_separator": ","
+}

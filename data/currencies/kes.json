@@ -1,11 +1,11 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
-  "symbol": "$",
+  "iso_code": "KES",
+  "name": "Kenyan Shilling",
+  "symbol": "KSh",
   "subunit": "Cent",
   "subunit_to_unit": 100,
   "symbol_first": true,
   "decimal_mark": ".",
   "thousands_separator": ",",
-  "smallest_denomination": 1
+  "smallest_denomination": 50
 }

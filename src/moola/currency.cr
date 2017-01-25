@@ -4,8 +4,6 @@ module Moola
   class Currency
 
     CURRENCY_DATA_PATH = File.expand_path("../../../data/currencies", __FILE__)
-    CURRENCY_DATA_FILENAME = "usd.json"
-
 
     @@loaded_currencies = {} of String => Moola::Currency
 
@@ -20,6 +18,7 @@ module Moola
       symbol_first: Bool,
       decimal_mark: String,
       thousands_separator: String,
+      smallest_denomination: Int32
     )
 
     def self.find(key : String) : Moola::Currency
@@ -43,8 +42,12 @@ module Moola
       Dir.foreach(CURRENCY_DATA_PATH) do |currency_file|
         file_path = "#{CURRENCY_DATA_PATH}/#{currency_file}"
         if File.file?(file_path)
-          currency_json = File.read(file_path)
-          @@loaded_currencies["usd"] = Moola::Currency.from_json(currency_json)
+          begin
+            currency_json = File.read(file_path)
+            currency = Moola::Currency.from_json(currency_json)
+            @@loaded_currencies[currency.iso_code.downcase] = currency
+          rescue ex
+          end
         end
       end
     end

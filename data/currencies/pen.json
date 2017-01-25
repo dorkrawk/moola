@@ -1,8 +1,8 @@
 {
-  "iso_code": "USD",
-  "name": "United States Dollar",
-  "symbol": "$",
-  "subunit": "Cent",
+  "iso_code": "PEN",
+  "name": "Peruvian Nuevo Sol",
+  "symbol": "S/.",
+  "subunit": "Céntimo",
   "subunit_to_unit": 100,
   "symbol_first": true,
   "decimal_mark": ".",
