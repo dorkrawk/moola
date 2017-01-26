@@ -49,6 +49,19 @@ describe Moola::Money do
     end
   end
 
+  describe "#convert_to" do
+
+    it "converts as expected" do
+      Moola::Exchange.clear_conversions
+      from = Moola::Currency.find("usd")
+      to = Moola::Currency.find("cad")
+      rate = 1.2
+      Moola::Exchange.add_conversion(from, to, rate)
+      from_money = Moola::Money.new(1_00, from)
+      from_money.convert_to(to).should eq Moola::Money.new(1_20, to)
+    end
+  end
+
   describe "#cents" do
 
     it "returns the amount for in cents for a Money" do

@@ -23,7 +23,7 @@ module Moola
       end
     end
 
-    def convert_to(new_currency: Moola::Currency)
+    def convert_to(new_currency : Moola::Currency)
       Moola::Exchange.convert(self, new_currency)
     end
 
