@@ -2,7 +2,6 @@ require "./moola/*"
 
 module Moola
 
-  # move these....
   class InvalidAmount < Exception
   end
 
@@ -10,6 +9,9 @@ module Moola
   end
 
   class UnknownCurrencyError < Exception
+  end
+
+  class UnavailableConversionError < Exception
   end
 
   def self.new(amount, currency_name=Money::DEFAULT_CURRENCY_NAME)
