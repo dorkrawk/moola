@@ -74,6 +74,27 @@ describe Moola::Money do
     it "can sort a list of Moneys" do
       [Moola::Money.new(500), Moola::Money.new(200), Moola::Money.new(700)].sort.should eq([Moola::Money.new(200), Moola::Money.new(500), Moola::Money.new(700)])
     end
+
+    it "raises a CompatabilityError when compaired to a Money with different currency" do
+      small_usd = Moola::Money.new(5, Moola::Currency.find("usd"))
+      big_cad = Moola::Money.new(6, Moola::Currency.find("cad"))
+      expect_raises(Moola::CompatabilityError) do
+        (small_usd < big_cad)
+      end
+    end
+  end
+
+  describe "#==" do
+    it "returns false when compaired to a non-Money object" do
+      money = Moola::Money.new(42_00)
+      (money == "$").should eq false
+    end
+
+    it "returns true when compaired to any Money.zero with different currency" do
+      zero_usd = Moola::Money.new(0, Moola::Currency.find("usd"))
+      zero_cad = Moola::Money.new(0, Moola::Currency.find("cad"))
+      (zero_usd == zero_cad).should eq true
+    end
   end
 
   describe "#-" do

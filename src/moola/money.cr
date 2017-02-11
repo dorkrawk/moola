@@ -1,5 +1,7 @@
 module Moola
   class Money
+    include Comparable(Moola::Money)
+
     DEFAULT_CURRENCY_NAME = "USD"
     DEFAULT_CURRENCY = Moola::Currency.find(DEFAULT_CURRENCY_NAME)
 
@@ -63,36 +65,15 @@ module Moola
       Money.new(amount * -1, currency)
     end
 
-    def ==(other)
-      if other.is_a?(Money)
-        (amount == other.amount && currency == other.currency) || (zero? && other.zero?)
-      else
-        false
-      end
-    end
-
-    def <(other)
-      if other.is_a?(Money) && currency == other.currency
-        amount < other.amount
+    def <=>(other : Moola::Money)
+      return 0 if zero? && other.zero?
+      if currency == other.currency
+        return 0 if amount == other.amount
+        return -1 if amount < other.amount
+        return 1
       else
         raise CompatabilityError.new
       end
-    end
-
-    def >(other)
-      !(self < other || self == other)
-    end
-
-    def <=(other)
-      self < other || self == other
-    end
-
-    def >=(other)
-      self > other || self == other
-    end
-
-    def !=(other)
-      !(self == other)
     end
 
     def +(other)
