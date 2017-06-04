@@ -7,8 +7,8 @@ Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  grey_matter:
-    github: dorkrawk/grey_matter
+  moola:
+    github: dorkrawk/moola
 ```
 
 ## Usage
