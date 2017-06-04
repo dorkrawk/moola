@@ -1,6 +1,16 @@
 # Moola
 A Crystal library for dealing with money (inspired by [RubyMoney](https://github.com/RubyMoney/money))
 
+## Installation
+
+Add this to your application's `shard.yml`:
+
+```yaml
+dependencies:
+  grey_matter:
+    github: dorkrawk/grey_matter
+```
+
 ## Usage
 
 ### Basic Money object
