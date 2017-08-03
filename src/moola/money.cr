@@ -10,6 +10,10 @@ module Moola
     def initialize(@amount : Int32, @currency : Moola::Currency = DEFAULT_CURRENCY)
     end
 
+    def initialize(@amount : Int32, currency_name : String)
+      @currency = Moola::Currency.find(currency_name)
+    end
+
     def format
       currency_symbol = currency.symbol
       decimal_mark = currency.decimal_mark

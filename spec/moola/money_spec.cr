@@ -2,6 +2,13 @@ require "../../spec_helper"
 
 describe Moola::Money do
 
+  describe "#initialize" do
+    it "accepts a currency iso code string" do
+      money = Moola::Money.new(42_00, "CAD")
+      money.currency.should eq(Moola::Currency.find("CAD"))
+    end
+  end
+
   describe "#zero?" do
 
     it "returns true if a Money's amount is 0" do
