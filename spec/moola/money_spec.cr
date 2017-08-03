@@ -119,6 +119,12 @@ describe Moola::Money do
       money_sum = Moola::Money.new(5_00) + Moola::Money.new(10_00)
       money_sum.amount.should eq(15_00)
     end
+
+    it "throws an error when two Moneys of different currency are added together" do
+      expect_raises(Moola::CompatabilityError) do
+        money_sum = Moola::Money.new(5_00, "USD") + Moola::Money.new(10_00, "CAD")
+      end
+    end
   end
 
   describe "#-" do
@@ -126,6 +132,12 @@ describe Moola::Money do
     it "subtracts two Moneys" do
       money_diff = Moola::Money.new(10_00) - Moola::Money.new(2_00)
       money_diff.amount.should eq(8_00)
+    end
+
+    it "throws an error when two Moneys of different currency are subtracted" do
+      expect_raises(Moola::CompatabilityError) do
+        money_sum = Moola::Money.new(10_00, "USD") + Moola::Money.new(2_00, "CAD")
+      end
     end
   end
 
