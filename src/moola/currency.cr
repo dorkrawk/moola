@@ -39,15 +39,12 @@ module Moola
     end
 
     def self.load_currencies
-      Dir.foreach(CURRENCY_DATA_PATH) do |currency_file|
-        file_path = "#{CURRENCY_DATA_PATH}/#{currency_file}"
-        if File.file?(file_path)
-          begin
-            currency_json = File.read(file_path)
-            currency = Moola::Currency.from_json(currency_json)
-            @@loaded_currencies[currency.iso_code.downcase] = currency
-          rescue ex
-          end
+      Dir.glob("#{CURRENCY_DATA_PATH}/*.json") do |file_path|
+        begin
+          currency_json = File.read(file_path)
+          currency = Moola::Currency.from_json(currency_json)
+          @@loaded_currencies[currency.iso_code.downcase] = currency
+        rescue ex
         end
       end
     end
