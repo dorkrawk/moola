@@ -3,7 +3,7 @@ A Crystal library for dealing with money (inspired by [RubyMoney](https://github
 
 ## Installation
 
-Crystal 0.24.2 and later
+*tested with Crystal 0.25.0*
 
 Add this to your application's `shard.yml`:
 
@@ -22,7 +22,7 @@ money.format # "$42.00"
 money.cents  # 4200
 money.zero?  # false
 money.to_f # 42.0
--money == Moola.new(-42_00)
+-money == Moola.new(-42_00) # true 
 ```
 
 ### Comparisons

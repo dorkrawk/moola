@@ -28,8 +28,13 @@ describe Moola::Money do
        money.negative?.should eq(true)
      end
 
-     it "returns true if a Money's amount is nto negative" do
+     it "returns true if a Money's amount is not negative" do
        money = Moola::Money.new(500)
+       money.negative?.should eq(false)
+     end
+
+     it "returns false if a Money's amount is 0" do
+       money = Moola::Money.new(0)
        money.negative?.should eq(false)
      end
   end

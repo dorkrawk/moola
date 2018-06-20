@@ -45,6 +45,7 @@ module Moola
           currency = Moola::Currency.from_json(currency_json)
           @@loaded_currencies[currency.iso_code.downcase] = currency
         rescue ex
+          # do nothing here to allow us to move on to the next currency file
         end
       end
     end
