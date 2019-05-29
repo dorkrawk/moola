@@ -3,7 +3,7 @@ A Crystal library for dealing with money (inspired by [RubyMoney](https://github
 
 ## Installation
 
-*tested with Crystal 0.25.0*
+*tested with Crystal 0.28.0*
 
 Add this to your application's `shard.yml`:
 
